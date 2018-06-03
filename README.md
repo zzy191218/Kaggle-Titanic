@@ -1,2 +1,2 @@
 # Kaggle-Titanic
-code for Kaggle Titanic Competition
+Just for fun to upload my Python code for Kaggle Titanic Survival Competition as well as a test
