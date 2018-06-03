@@ -5,30 +5,32 @@ Created on Wed May 16 00:55:36 2018
 @author: Zuo
 """
 
-import pandas as pd                   #数据分析
-import numpy as np                    #科学计算
+import pandas as pd              
+import numpy as np                    
 from pandas import Series, DataFrame
 
 import matplotlib.pyplot as plt
 
-from pylab import mpl                            #显示中文字体
-mpl.rcParams['font.sans-serif'] = ['FangSong']   #指定默认字体：仿宋
+from pylab import mpl                            #show Chinese Charactor
+mpl.rcParams['font.sans-serif'] = ['FangSong']   #setting Deflault Chinese Format
 mpl.rcParams['axes.unicode_minus'] = False       #解决保存图像是负号'-'显示为方块的问题
 
-#读取csv文件中的数据
+#data path
 data_train_file='C:/Users/Zuo/Python_Data/Titanic/train.csv'
 data_test_file='C:/Users/Zuo/Python_Data/Titanic/test.csv'
 
-data_train = pd.read_csv(data_train_file)            #把.csv文件读入成dataframe格式
+data_train = pd.read_csv(data_train_file)            #read csv into dataframe format
 print(data_train)
 
 data_train.info()
 dsb=data_train.describe()
 print(dsb)
 
-data_train.Pclass.value_counts()
 
-#画图来看看属性和结果之间的关系
+##EDA process
+data_train.Pclass.value_counts()  #画图来看看属性和结果之间的关系
+
+
 fig = plt.figure()
 fig.set(alpha=0.2)   #设置图表颜色透明度
 
